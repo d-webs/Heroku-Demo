@@ -20,7 +20,8 @@
     "babel-preset-react": "^6.24.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "babel-preset-stage-2": "^6.24.1"
   },
   "engines": {
    "node": "6.7.0",
@@ -28,8 +29,5 @@
   },
   "scripts": {
    "postinstall": "./node_modules/.bin/webpack"
- },
-  "devDependencies": {
-    "babel-preset-stage-2": "^6.24.1"
-  }
+ }
 }
