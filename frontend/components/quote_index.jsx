@@ -23,6 +23,7 @@ class QuoteIndex extends Component {
   render() {
     return(
       <main className='quote-container'>
+        {/*<img src={window.staticImages.headerImage} />*/}
         <div className='quote-button' onClick={this.handleClick}>
           GET A QUOTE
         </div>
