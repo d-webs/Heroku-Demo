@@ -1,29 +1,26 @@
 import React, { Component } from 'react';
-import { fetchQuote } from 'react';
 
 class QuoteIndex extends Component {
   constructor() {
     super();
 
-    this.state = { quote: '', loading: false };
+    this.state = { quote: '' };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState({ loading: true }, () => {
-      return $.ajax({
-        method: 'GET',
-        url: 'api/quotes'
-      }).then(quote => {
-        this.setState({ quote: quote.text, loading: false });
-      });
+    return $.ajax({
+      method: 'GET',
+      url: 'api/quotes'
+    }).then(quote => {
+      this.setState({ quote: quote.text });
     });
   }
 
   render() {
     return(
       <main className='quote-container'>
-        {/*<img src={window.staticImages.headerImage} />*/}
+        <img src='assets/quotation_marks.png' />
         <div className='quote-button' onClick={this.handleClick}>
           GET A QUOTE
         </div>
